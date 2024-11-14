@@ -1,90 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.11.2 on darwin)" generated="2024-11-14T17:17:45.183361" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.11.2 on darwin)" generated="2024-11-14T22:34:40.931024" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="/Users/erikstandard/Desktop/ohtu_palautukset_24/viikko3/webcounter copy/src/tests">
 <suite id="s1-s1" name="Increment" source="/Users/erikstandard/Desktop/ohtu_palautukset_24/viikko3/webcounter copy/src/tests/increment.robot">
 <kw name="Open And Configure Browser" owner="resource" type="SETUP">
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2024-11-14T17:17:45.264489" elapsed="0.000113"/>
+<status status="PASS" start="2024-11-14T22:34:41.015135" elapsed="0.000113"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-14T17:17:45.265000" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<msg time="2024-11-14T17:17:50.861341" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at /usr/local/bin/chromedriver/chromedriver might not be compatible with the detected chrome version (131.0.6778.70); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-14T22:34:41.015403" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg time="2024-11-14T22:34:41.212043" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at /usr/local/bin/chromedriver/chromedriver might not be compatible with the detected chrome version (131.0.6778.70); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-14T17:17:45.264895" elapsed="7.861870"/>
+<status status="PASS" start="2024-11-14T22:34:41.015317" elapsed="1.386773"/>
 </kw>
-<status status="PASS" start="2024-11-14T17:17:45.264209" elapsed="7.862979"/>
+<status status="PASS" start="2024-11-14T22:34:41.014859" elapsed="1.387459"/>
 </kw>
 <test id="s1-s1-t1" name="At start the counter is zero" line="7">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-14T17:17:53.128703" level="INFO">Opening url 'http://localhost:5001'</msg>
+<msg time="2024-11-14T22:34:42.403376" level="INFO">Opening url 'http://localhost:5001'</msg>
 <arg>${HOME_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-14T17:17:53.128385" elapsed="0.680296"/>
+<status status="PASS" start="2024-11-14T22:34:42.403204" elapsed="0.564209"/>
 </kw>
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2024-11-14T17:17:54.321866" level="INFO">Page title is 'Laskuri'.</msg>
+<msg time="2024-11-14T22:34:43.479255" level="INFO">Page title is 'Laskuri'.</msg>
 <arg>Laskuri</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2024-11-14T17:17:53.809081" elapsed="0.512932"/>
+<status status="PASS" start="2024-11-14T22:34:42.967775" elapsed="0.511574"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-11-14T17:17:55.362607" level="INFO">Current page contains text 'nappia painettu 0 kertaa'.</msg>
+<msg time="2024-11-14T22:34:44.521103" level="INFO">Current page contains text 'nappia painettu 0 kertaa'.</msg>
 <arg>nappia painettu 0 kertaa</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-11-14T17:17:54.322286" elapsed="1.040466"/>
+<status status="PASS" start="2024-11-14T22:34:43.479522" elapsed="1.041759"/>
 </kw>
-<status status="PASS" start="2024-11-14T17:17:53.127359" elapsed="2.235703"/>
+<status status="PASS" start="2024-11-14T22:34:42.402444" elapsed="2.119160"/>
 </test>
 <test id="s1-s1-t2" name="When button pressed twice the counter is two" line="12">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-14T17:17:55.364148" level="INFO">Opening url 'http://localhost:5001'</msg>
+<msg time="2024-11-14T22:34:44.522410" level="INFO">Opening url 'http://localhost:5001'</msg>
 <arg>${HOME_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-14T17:17:55.363715" elapsed="0.520320"/>
+<status status="PASS" start="2024-11-14T22:34:44.522229" elapsed="0.519119"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-14T17:17:55.886558" level="INFO">Clicking button 'Paina'.</msg>
+<msg time="2024-11-14T22:34:45.043946" level="INFO">Clicking button 'Paina'.</msg>
 <arg>Paina</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-14T17:17:55.885420" elapsed="1.681666"/>
+<status status="PASS" start="2024-11-14T22:34:45.042429" elapsed="1.584520"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-14T17:17:57.568882" level="INFO">Clicking button 'Paina'.</msg>
+<msg time="2024-11-14T22:34:46.628316" level="INFO">Clicking button 'Paina'.</msg>
 <arg>Paina</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-14T17:17:57.568134" elapsed="1.575376"/>
+<status status="PASS" start="2024-11-14T22:34:46.627786" elapsed="1.572276"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-11-14T17:18:00.171329" level="INFO">Current page contains text 'nappia painettu 2 kertaa'.</msg>
+<msg time="2024-11-14T22:34:49.233303" level="INFO">Current page contains text 'nappia painettu 2 kertaa'.</msg>
 <arg>nappia painettu 2 kertaa</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-11-14T17:17:59.144278" elapsed="1.027355"/>
+<status status="PASS" start="2024-11-14T22:34:48.201179" elapsed="1.032558"/>
 </kw>
-<status status="PASS" start="2024-11-14T17:17:55.363315" elapsed="4.809045"/>
+<status status="PASS" start="2024-11-14T22:34:44.521853" elapsed="4.712669"/>
+</test>
+<test id="s1-s1-t3" name="Given the counter has a nonzero value" line="18">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-14T22:34:49.236781" level="INFO">Opening url 'http://localhost:5001'</msg>
+<arg>${HOME_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-14T22:34:49.236339" elapsed="0.525440"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-14T22:34:49.763503" level="INFO">Clicking button 'Nollaa'.</msg>
+<arg>Nollaa</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-14T22:34:49.762696" elapsed="1.569777"/>
+</kw>
+<status status="PASS" start="2024-11-14T22:34:49.235348" elapsed="2.097499"/>
 </test>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-14T17:18:00.173788" elapsed="0.568183"/>
+<status status="PASS" start="2024-11-14T22:34:51.333777" elapsed="0.574640"/>
 </kw>
-<status status="PASS" start="2024-11-14T17:17:45.192039" elapsed="15.549983"/>
+<status status="PASS" start="2024-11-14T22:34:40.940087" elapsed="10.968461"/>
 </suite>
-<status status="PASS" start="2024-11-14T17:17:45.183862" elapsed="15.558539"/>
+<suite id="s1-s2" name="Reset" source="/Users/erikstandard/Desktop/ohtu_palautukset_24/viikko3/webcounter copy/src/tests/reset.robot">
+<kw name="Open And Configure Browser" owner="resource" type="SETUP">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-11-14T22:34:51.913133" elapsed="0.000279"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-14T22:34:51.913728" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg time="2024-11-14T22:34:52.012561" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at /usr/local/bin/chromedriver/chromedriver might not be compatible with the detected chrome version (131.0.6778.70); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-14T22:34:51.913539" elapsed="0.803961"/>
+</kw>
+<status status="PASS" start="2024-11-14T22:34:51.912915" elapsed="0.804919"/>
+</kw>
+<test id="s1-s2-t1" name="At start the counter is zero" line="7">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-14T22:34:52.719960" level="INFO">Opening url 'http://localhost:5001'</msg>
+<arg>${HOME_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-14T22:34:52.719733" elapsed="0.591610"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-11-14T22:34:53.819447" level="INFO">Page title is 'Laskuri'.</msg>
+<arg>Laskuri</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-11-14T22:34:53.311640" elapsed="0.508184"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-14T22:34:54.849024" level="INFO">Current page contains text 'nappia painettu 0 kertaa'.</msg>
+<arg>nappia painettu 0 kertaa</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-14T22:34:53.820602" elapsed="1.028692"/>
+</kw>
+<status status="PASS" start="2024-11-14T22:34:52.718610" elapsed="2.131171"/>
+</test>
+<test id="s1-s2-t2" name="Given the counter has a nonzero value" line="12">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-14T22:34:54.851119" level="INFO">Opening url 'http://localhost:5001'</msg>
+<arg>${HOME_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-14T22:34:54.850806" elapsed="0.520690"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-14T22:34:55.372554" level="INFO">Clicking button 'Paina'.</msg>
+<arg>Paina</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-14T22:34:55.372018" elapsed="1.594801"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-14T22:34:56.968480" level="INFO">Clicking button 'Paina'.</msg>
+<arg>Paina</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-14T22:34:56.967705" elapsed="1.566036"/>
+</kw>
+<status status="PASS" start="2024-11-14T22:34:54.850202" elapsed="3.683770"/>
+</test>
+<test id="s1-s2-t3" name="When the counter is reset" line="17">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-14T22:34:58.534443" level="INFO">Opening url 'http://localhost:5001'</msg>
+<arg>${HOME_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-14T22:34:58.534332" elapsed="0.512331"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-14T22:34:59.048399" level="INFO">Clicking button 'Nollaa'.</msg>
+<arg>Nollaa</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-14T22:34:59.047577" elapsed="1.577723"/>
+</kw>
+<status status="PASS" start="2024-11-14T22:34:58.534128" elapsed="2.091941"/>
+</test>
+<test id="s1-s2-t4" name="Then the counter value should be zero" line="21">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-14T22:35:00.627626" level="INFO">Opening url 'http://localhost:5001'</msg>
+<arg>${HOME_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-14T22:35:00.627242" elapsed="0.519580"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-14T22:35:02.167682" level="INFO">Current page contains text 'nappia painettu 0 kertaa'.</msg>
+<arg>nappia painettu 0 kertaa</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-14T22:35:01.147656" elapsed="1.020534"/>
+</kw>
+<status status="PASS" start="2024-11-14T22:35:00.626531" elapsed="1.542425"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-14T22:35:02.170501" elapsed="0.603226"/>
+</kw>
+<status status="PASS" start="2024-11-14T22:34:51.909312" elapsed="10.865086"/>
+</suite>
+<status status="PASS" start="2024-11-14T22:34:40.931864" elapsed="21.844485"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
-<stat pass="2" fail="0" skip="0" id="s1-s1" name="Increment">Tests.Increment</stat>
+<stat pass="7" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="Increment">Tests.Increment</stat>
+<stat pass="4" fail="0" skip="0" id="s1-s2" name="Reset">Tests.Reset</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-11-14T17:17:50.861341" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at /usr/local/bin/chromedriver/chromedriver might not be compatible with the detected chrome version (131.0.6778.70); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-14T22:34:41.212043" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at /usr/local/bin/chromedriver/chromedriver might not be compatible with the detected chrome version (131.0.6778.70); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-14T22:34:52.012561" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at /usr/local/bin/chromedriver/chromedriver might not be compatible with the detected chrome version (131.0.6778.70); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
